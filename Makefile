@@ -8,5 +8,7 @@ package-install:
 	uv tool install dist/*.whl
 overwriting:
 	uv tool install dist/*.whl --force
+uninstall hexlet-code:
+	uv tool uninstall hexlet-code
 
 
