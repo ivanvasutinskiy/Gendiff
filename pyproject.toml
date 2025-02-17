@@ -20,4 +20,5 @@ dev = [
 
 [project.scripts]
 gendiff = "gendiff.scripts.gendiff:main"
-get_gendiff = "gendiff.scripts.gendiff:get_gendiff"
+first_file = "gendiff.scripts.gendiff:first_file"
+second_file = "gendiff.scripts.gendiff:second_file"
