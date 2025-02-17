@@ -15,3 +15,4 @@ packages = ["gendiff"]
 
 [project.scripts]
 gendiff = "gendiff.scripts.gendiff:main"
+get_gendiff = "gendiff.scripts.gendiff:get_gendiff"
