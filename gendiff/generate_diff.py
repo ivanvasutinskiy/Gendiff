@@ -1,5 +1,6 @@
-from re import sub
 import json
+from re import sub
+
 
 def compare_dictionaries(dict1, dict2):
     differences = {}
@@ -15,7 +16,7 @@ def compare_dictionaries(dict1, dict2):
 
     for key in dict2:
         if key not in dict1:
-            differences[f'+ {key}'] =  dict2[key]
+            differences[f'+ {key}'] = dict2[key]
     differences = json.dumps(differences, indent=2)
     result = sub('["'',]', '', differences)
     return result
