@@ -16,6 +16,6 @@ def compare_dictionaries(dict1, dict2):
     for key in dict2:
         if key not in dict1:
             differences[f'+ {key}'] =  dict2[key]
-    differences = json.dumps(differences, indent=4)
+    differences = json.dumps(differences, indent=2)
     result = sub('["'',]', '', differences)
     return result
