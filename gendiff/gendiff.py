@@ -12,7 +12,6 @@ def description_of_thegender_spread():
     dict1 = json.loads(first_f(args.first_file))
     dict2 = json.loads(second_f(args.second_file))
     diff =  (compare_dictionaries(dict1, dict2))
-    diff = json.dumps(diff, indent=2)
     print(diff)
 
 def first_f(file1):
