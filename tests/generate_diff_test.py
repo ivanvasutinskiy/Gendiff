@@ -1,5 +1,16 @@
 from gendiff.generate_diff import compare_dictionaries
 
+def test_extract_links():
+    with_links_path = 'gendiff/file1.json'
+    with open(with_links_path) as f:
+        file = f.read()
+        
+
+
+
+
+
+
 def test_compare_dictionaries():
     dict_a = {
         'apple': 1,
