@@ -1,6 +1,4 @@
-
-
-def compare_dictionaries(dict1, dict2):
+def get_difference(dict1, dict2):
     differences = '{\n'
 
     for key in dict1:
