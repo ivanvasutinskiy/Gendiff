@@ -15,7 +15,7 @@ lint:
 fix:
 	uv run ruff check --fix gendiff
 test-coverage:
-	uv run coverage run -m pytest
+	uv run pytest --cov=gendiff tests --cov-report xml
 check:
 	uv run pytest
 
