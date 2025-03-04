@@ -1,5 +1,7 @@
 import json
 import os
+import yaml
+from yaml.loader import SafeLoader
 
 from gendiff.get_difference import get_difference
 
@@ -15,6 +17,8 @@ def generate_diff(file_path1, file_path2, format_name='stylish'):
 def parse_data(data, format_name):
     if format_name == 'json':
         return json.loads(data)
+    if format_name == 'yaml' or 'yml':
+        return yaml.load(data, Loader=SafeLoader)
 
 
 def load_file(file_path):
@@ -23,6 +27,10 @@ def load_file(file_path):
         if extension == 'json':
             data_object = json.load(file)
             data = json.dumps(data_object, sort_keys=True, indent=4)
-            print()
             return parse_data(data, extension)
+        if extension == 'yaml' or 'yml':
+            data_object = yaml.load(file, Loader=SafeLoader)
+            data = yaml.dump(data_object, indent=4)
+            return parse_data(data, extension)
+
 
