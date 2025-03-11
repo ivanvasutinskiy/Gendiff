@@ -1,5 +1,5 @@
 from gendiff.gendiff_logic import generate_diff
-from gendiff.parser import description_of_thegender_spread
+from gendiff.cli import description_of_thegender_spread
 
 
 def main():
