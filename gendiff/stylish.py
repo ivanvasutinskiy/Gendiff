@@ -36,7 +36,5 @@ def to_str(value):
         return "null"
     if value == 0:
         return "0"
-    if value == "0":
-        return value
     else:
         return value
