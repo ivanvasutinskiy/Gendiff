@@ -2,6 +2,7 @@ import json
 import os
 import yaml
 import re
+import pprint
 from gendiff.parser import parse
 from yaml.loader import SafeLoader
 from gendiff.generate import get_difference
@@ -13,7 +14,7 @@ def generate_diff(file_path1, file_path2, format_name='stylish'):
     data2 = load_file(file_path2)
 
     diff = get_difference(data1, data2)
-    return re.sub('[",]', '', (json.dumps(transform_changes(diff), indent=4)))
+    return transform_changes(diff)
 
 
 def load_file(file_path):
