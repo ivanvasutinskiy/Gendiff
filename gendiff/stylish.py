@@ -21,7 +21,7 @@ def transform_changes(changes):
 
     result = ['{']
     for item in changes:
-        result.append(process_node(item, 1).strip())
+        result.append(process_node(item, 1))
     return '\n'.join(result) + '\n}'
 
 
