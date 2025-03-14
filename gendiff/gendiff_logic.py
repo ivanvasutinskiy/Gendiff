@@ -1,12 +1,12 @@
 import json
 import os
+
 import yaml
-import re
-import pprint
-from gendiff.parser import parse
 from yaml.loader import SafeLoader
-from gendiff.generate import get_difference
+
 from gendiff.formatters.form_selector import select_formatter
+from gendiff.generate import get_difference
+from gendiff.parser import parse
 
 
 def generate_diff(file_path1, file_path2, format_name='stylish'):

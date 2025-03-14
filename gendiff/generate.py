@@ -5,6 +5,7 @@ def to_add(key, value):
         'value': value
     }
 
+
 def to_delete(key, value):
     return {
         'action': 'deleted',
@@ -12,12 +13,14 @@ def to_delete(key, value):
         'value': value
     }
 
+
 def to_unchanged(key, value):
     return {
         'action': 'unchanged',
         'name': key,
         'value': value
     }
+
 
 def to_modified(key, value1, value2):
     return {
@@ -27,12 +30,14 @@ def to_modified(key, value1, value2):
         'old_value': value1
     }
 
+
 def to_nested(key, value1, value2):
     return {
         'action': 'nested',
         'name': key,
         'children': get_difference(value1, value2)
     }
+
 
 def get_difference(data1, data2):
     keys = data1.keys() | data2.keys()
