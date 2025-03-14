@@ -7,3 +7,5 @@ def parse(data, format_name):
         return json.loads(data)
     if format_name == 'yaml' or 'yml':
         return yaml.load(data, Loader=SafeLoader)
+    
+

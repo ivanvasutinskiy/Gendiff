@@ -2,14 +2,14 @@ def to_add(key, value):
     return {
         'action': 'added',
         'name': key,
-        'new_value': value
+        'value': value
     }
 
 def to_delete(key, value):
     return {
         'action': 'deleted',
         'name': key,
-        'old_value': value
+        'value': value
     }
 
 def to_unchanged(key, value):

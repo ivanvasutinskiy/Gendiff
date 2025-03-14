@@ -6,16 +6,15 @@ import pprint
 from gendiff.parser import parse
 from yaml.loader import SafeLoader
 from gendiff.generate import get_difference
-from gendiff.stylish import transform_changes
+from gendiff.formatters.form_selector import select_formatter
 
 
 def generate_diff(file_path1, file_path2, format_name='stylish'):
     data1 = load_file(file_path1)
     data2 = load_file(file_path2)
 
-    diff = get_difference(data1, data2)
-    print(diff)
-    return transform_changes(diff)
+    dict_diff = get_difference(data1, data2)
+    return select_formatter(dict_diff, format_name)
 
 
 def load_file(file_path):

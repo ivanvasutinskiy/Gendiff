@@ -18,5 +18,11 @@ test-coverage:
 	uv run pytest --cov=gendiff tests --cov-report xml
 check:
 	uv run pytest
+install 2.0:
+	uv tool uninstall hexlet-code
+	uv build
+	uv tool install dist/*.whl
+
+
 
 
