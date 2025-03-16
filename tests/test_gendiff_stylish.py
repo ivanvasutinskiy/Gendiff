@@ -1,6 +1,6 @@
 import pytest
 
-from gendiff.gendiff_logic import generate_diff
+from gendiff.generate_diff import generate_diff
 
 @pytest.fixture
 def file_one():
