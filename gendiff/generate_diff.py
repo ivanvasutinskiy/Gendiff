@@ -12,12 +12,9 @@ from gendiff.parser import parse
 def generate_diff(file_path1, file_path2, format_name='stylish'):
     data1 = load_file(file_path1)
     data2 = load_file(file_path2)
-    if data1 is not None and data2 is not None:
-        dict_diff = get_difference(data1, data2)
-        return select_formatter(dict_diff, format_name)
-    raise ValueError("Входные данные не могут быть None.")
 
-   
+    dict_diff = get_difference(data1, data2)
+    return select_formatter(dict_diff, format_name)
 
 
 def load_file(file_path):
