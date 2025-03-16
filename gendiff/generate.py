@@ -8,7 +8,7 @@ def to_add(key, value):
 
 def to_delete(key, value):
     return {
-        'action': 'deleted',
+        'action': 'removed',
         'name': key,
         'value': value
     }
@@ -24,7 +24,7 @@ def to_unchanged(key, value):
 
 def to_modified(key, value1, value2):
     return {
-        'action': 'modified',
+        'action': 'updated',
         'name': key,
         'new_value': value2,
         'old_value': value1

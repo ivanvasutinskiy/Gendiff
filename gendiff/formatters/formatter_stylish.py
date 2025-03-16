@@ -14,7 +14,7 @@ def make_string(tree, depth=1):
             new_depth = depth + 1
             indent = make_indent(depth)
             result += "\n"
-            if item['action'] == 'deleted':
+            if item['action'] == 'removed':
                 result += f"{indent}- {item['name']}: " \
                 f"{str(to_str(item['value'], new_depth))}"
             elif item['action'] == 'added':
@@ -23,7 +23,7 @@ def make_string(tree, depth=1):
             elif item['action'] == 'nested':
                 result += f"{indent}  {item['name']}: " \
                 f"{walk(item['children'], new_depth, result="")}"
-            elif item['action'] == 'modified':
+            elif item['action'] == 'updated':
                 result += f"{indent}- {item['name']}: " \
                 f"{str(to_str(item['old_value'], new_depth))}\n"
                 result += f"{indent}+ {item['name']}: " \
