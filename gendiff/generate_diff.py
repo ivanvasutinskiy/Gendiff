@@ -20,6 +20,7 @@ def load_file(file_path):
     for root, dirs, files in os.walk('/'):
         if file_path in files:
             file_path = os.path.join(root, file_path)
+            print(file_path)
             try: 
                 with open(os.path.abspath(file_path), 'r') as file:
                     extension = file_path.split('.')[-1]
@@ -35,6 +36,5 @@ def load_file(file_path):
                 print(f"Файл не найден: {file_path}")
             except Exception as e:
                 print(f"Произошла ошибка при обработке файла: {str(e)}")
-    return None
 
 
