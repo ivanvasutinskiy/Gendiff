@@ -1,14 +1,8 @@
-import json
-import os
-
-import yaml
 
 
 from gendiff.formatters.form_selector import select_formatter
 from gendiff.generate import get_difference
-from gendiff.parser import parse, load_file
-
-
+from gendiff.parser import load_file, parse
 
 
 def generate_diff(path_to_file1, path_to_file2, format_name="stylish"):
