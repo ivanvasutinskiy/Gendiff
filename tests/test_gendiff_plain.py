@@ -83,17 +83,17 @@ Property 'group3' was added with value: [complex value]
 """
 
 
-def test_generate_diff(difference):
+def test_generate_diff_json(difference):
     result = generate_diff('./tests/fixtures/file1.json',
                            './tests/fixtures/file2.json', 'plain')
     assert result.strip() == difference.strip()
 
-def test_generate_diff(file_one, file_two, difference):
+def test_generate_diff_yaml(difference):
     result = generate_diff('./tests/fixtures/file1.yaml',
                            './tests/fixtures/file2.yaml', 'plain')
     assert result.strip() == difference.strip()
 
-def test_generate_diff(file_one, file_two, difference):
+def test_generate_diff_yml(difference):
     result = generate_diff('./tests/fixtures/file1.yml',
                            './tests/fixtures/file2.yml', 'plain')
     assert result.strip() == difference.strip()

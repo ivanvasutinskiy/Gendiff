@@ -187,19 +187,19 @@ def difference():
 ]"""
 
 
-def test_generate_diff(difference):
+def test_generate_diff_json(difference):
     result = generate_diff('./tests/fixtures/file1.json',
                             './tests/fixtures/file2.json', 'json')
     assert result.strip() == difference.strip()
 
 
-def test_generate_diff(difference):
+def test_generate_diff_yaml(difference):
     result = generate_diff('./tests/fixtures/file1.yaml',
                             './tests/fixtures/file2.yaml', 'json')
     assert result.strip() == difference.strip()
 
 
-def test_generate_diff(difference):
+def test_generate_diff_yml(difference):
     result = generate_diff('./tests/fixtures/file1.yml',
                            './tests/fixtures/file2.yml', 'json')
     assert result.strip() == difference.strip()
