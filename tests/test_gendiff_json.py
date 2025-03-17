@@ -192,10 +192,12 @@ def test_generate_diff(difference):
                             './tests/fixtures/file2.json', 'json')
     assert result.strip() == difference.strip()
 
+
 def test_generate_diff(difference):
     result = generate_diff('./tests/fixtures/file1.yaml',
                             './tests/fixtures/file2.yaml', 'json')
     assert result.strip() == difference.strip()
+
 
 def test_generate_diff(difference):
     result = generate_diff('./tests/fixtures/file1.yml',
