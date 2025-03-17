@@ -10,8 +10,8 @@ from gendiff.parser import parse
 
 
 def generate_diff(file_path1, file_path2, format_name='stylish'):
-    data1 = parse(*load_file(file_path1))
-    data2 = parse(*load_file(file_path2))
+    data1 = load_file(file_path1)
+    data2 = load_file(file_path2)
 
     dict_diff = get_difference(data1, data2)
     return select_formatter(dict_diff, format_name)
@@ -24,9 +24,8 @@ def load_file(file_path):
                 extension = file_path.split('.')[-1]
                 if extension == 'json':
                     data = json.load(file)
-                    return data, extension 
                 if extension == 'yaml' or  extension == 'yml':
                     data = yaml.safe_load(file)
-                    return data, extension
+                return parse(data, extension)
 
 
