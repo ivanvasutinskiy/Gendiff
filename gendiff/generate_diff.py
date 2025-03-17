@@ -15,7 +15,7 @@ def generate_diff(file_path1, file_path2, format_name='stylish'):
     if data1 != None and data2 != None:
         dict_diff = get_difference(data1, data2)
         return select_formatter(dict_diff, format_name)
-    
+    return 'Проверьте коректность введенных данных и повторите операцию'
 
 def load_file(file_path):
     for root, dirs, files in os.walk('/'):
