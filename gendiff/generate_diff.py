@@ -26,7 +26,7 @@ def load_file(file_path):
                     data_object = json.load(file)
                     data = json.dumps(data_object, sort_keys=True, indent=4)
                     return parse(data, extension) 
-                elif extension in ('yaml', 'yml'):
+                if extension == 'yaml' or  extension == 'yml':
                     data_object = yaml.load(file, Loader=SafeLoader)
                     data = yaml.dump(data_object, indent=4)
                     return parse(data, extension)
