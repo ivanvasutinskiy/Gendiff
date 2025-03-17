@@ -6,7 +6,7 @@ from yaml.loader import SafeLoader
 
 from gendiff.formatters.form_selector import select_formatter
 from gendiff.generate import get_difference
-from gendiff.parser import parse
+
 
 
 def generate_diff(file_path1, file_path2, format_name='stylish'):
@@ -24,8 +24,10 @@ def load_file(file_path):
                 extension = file_path.split('.')[-1]
                 if extension == 'json':
                     data = json.load(file)
+                    print('1')
                 if extension == 'yaml' or  extension == 'yml':
                     data = yaml.safe_load(file)
-                return parse(data, extension)
+                    print('2')
+                return data
 
 
