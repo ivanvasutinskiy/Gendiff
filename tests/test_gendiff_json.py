@@ -184,14 +184,14 @@ def difference():
   }
 ]"""
 
-def test_generate_diff(file_one, file_two, difference):
-    result = generate_diff('file1.json', 'file2.json', 'json')
+def test_generate_diff(difference):
+    result = generate_diff('./tests/fixtures/file1.json', './tests/fixtures/file2.json', 'json')
     assert result.strip() == difference.strip()
 
-def test_generate_diff(file_one, file_two, difference):
-    result = generate_diff('file1.yaml', 'file2.yaml', 'json')
+def test_generate_diff(difference):
+    result = generate_diff('./tests/fixtures/file1.yaml', './tests/fixtures/file2.yaml', 'json')
     assert result.strip() == difference.strip()
 
-def test_generate_diff(file_one, file_two, difference):
-    result = generate_diff('file1.yml', 'file2.yml', 'json')
+def test_generate_diff(difference):
+    result = generate_diff('./tests/fixtures/file1.yml', './tests/fixtures/file2.yml', 'json')
     assert result.strip() == difference.strip()
