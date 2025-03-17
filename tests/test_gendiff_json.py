@@ -1,10 +1,8 @@
 import pytest
-
 from gendiff.generate_diff import generate_diff
 
+
 @pytest.fixture
-
-
 def file_one():
     return {
   "common": {
@@ -33,9 +31,8 @@ def file_one():
   }
 }
 
+
 @pytest.fixture
-
-
 def file_two():
     return {
   "common": {
@@ -69,9 +66,8 @@ def file_two():
   }
 }
 
+
 @pytest.fixture
-
-
 def difference():
     return """[
   {
@@ -189,6 +185,7 @@ def difference():
     }
   }
 ]"""
+
 
 def test_generate_diff(difference):
     result = generate_diff('./tests/fixtures/file1.json',

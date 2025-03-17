@@ -1,10 +1,8 @@
 import pytest
-
 from gendiff.generate_diff import generate_diff
 
+
 @pytest.fixture
-
-
 def file_one():
     return {
   "common": {
@@ -33,9 +31,8 @@ def file_one():
   }
 }
 
+
 @pytest.fixture
-
-
 def file_two():
     return {
   "common": {
@@ -69,9 +66,8 @@ def file_two():
   }
 }
 
+
 @pytest.fixture
-
-
 def difference():
     return """Property 'common.follow' was added with value: false
 Property 'common.setting2' was removed
@@ -85,6 +81,7 @@ Property 'group1.nest' was updated. From [complex value] to 'str'
 Property 'group2' was removed
 Property 'group3' was added with value: [complex value]
 """
+
 
 def test_generate_diff(difference):
     result = generate_diff('./tests/fixtures/file1.json',
