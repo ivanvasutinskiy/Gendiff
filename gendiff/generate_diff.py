@@ -23,12 +23,10 @@ def load_file(file_path):
             with open(os.path.abspath(file_path), 'r') as file:
                 extension = file_path.split('.')[-1]
                 if extension == 'json':
-                    data_object = json.load(file)
-                    data = json.dumps(data_object, sort_keys=True, indent=4)
+                    data = json.load(file)
                     return data, extension 
                 if extension == 'yaml' or  extension == 'yml':
-                    data_object = yaml.load(file, Loader=SafeLoader)
-                    data = yaml.dump(data_object, indent=4)
+                    data = yaml.safe_load(file)
                     return data, extension
 
 
