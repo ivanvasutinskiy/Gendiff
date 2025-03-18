@@ -15,5 +15,8 @@ def parse(data, format_name):
             return json.load(data)
         case 'yml' | 'yaml':
             return yaml.safe_load(data)
+        case _:
+            raise ValueError("Unsupported data format")
+    
     
     
