@@ -40,8 +40,8 @@ $ uv tool install dist/*.whl
 $ uv run gendiff --help
 ```
 
-- -h, --help — отобразить это справочное сообщение и выйти.
-- f FORMAT, --format FORMAT — задайте формат вывода (plain / json / stylish)
+- -h, --help — отобразить справочное сообщение и выйти.
+- -f FORMAT, --format FORMAT — задайте формат вывода (plain / json / stylish)
 
 ## Примеры работы программы:
 
