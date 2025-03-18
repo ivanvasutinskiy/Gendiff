@@ -45,7 +45,7 @@ $ uv run gendiff --help
 
 ## Примеры работы программы:
 
-### STYLISH формат
+### STYLISH формат (по умолчанию)
 
 ```
 $ uv run gendiff ./tests/fixtures/file1.json ./tests/fixtures/file2.json
