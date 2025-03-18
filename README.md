@@ -15,16 +15,17 @@
 
 ## Установка
 
-- Клонируем GitHub репозиторий
+Клонируем GitHub репозиторий
 ```
 $ git clone https://github.com/ivanvasutinskiy/python-project-50.git
 ```
-- Устанавливаем UV
+Устанавливаем UV
 ```
 $ curl -LsSf https://astral.sh/uv/install.sh | sh
 ```
 
-- Запуск программы
+## Запуск программы
+
 ```
 $ uv sync
 $ uv build 
@@ -33,7 +34,8 @@ $ uv tool install dist/*.whl
 
 ## Описание
 
-- Вывод справки
+### Вывод справки
+
 ```
 $ uv run gendiff --help
 ```
@@ -41,23 +43,26 @@ $ uv run gendiff --help
 - -h, --help — отобразить это справочное сообщение и выйти.
 - f FORMAT, --format FORMAT — задайте формат вывода (plain / json / stylish)
 
-### Примеры работы программы:
+## Примеры работы программы:
 
-- STYLISH формат
+### STYLISH формат
+
 ```
 $ uv run gendiff ./tests/fixtures/file1.json ./tests/fixtures/file2.json
 ```
 
 [![asciicast](https://asciinema.org/a/exuViPa6aApWM7j2JkUgqvsLz.svg)](https://asciinema.org/a/exuViPa6aApWM7j2JkUgqvsLz)
 
-- PLAIN формат
+### PLAIN формат
+
 ```
 $ uv run gendiff -f plain ./tests/fixtures/file1.json ./tests/fixtures/file2.json
 ```
 
 [![asciicast](https://asciinema.org/a/W1XDfIOWOAC6BaczmTWDxXDUK.svg)](https://asciinema.org/a/W1XDfIOWOAC6BaczmTWDxXDUK)
 
-- JSON формат
+### JSON формат
+
 ```
 $ uv run gendiff -f json ./tests/fixtures/file1.json ./tests/fixtures/file2.json
 ```
