@@ -9,8 +9,14 @@ def load_file(path_to_file):
     return data, extension
 
 
-def parse(data, extension):
-    if extension == "yml" or extension == "yaml":
-        return yaml.safe_load(data)
-    if extension == "json":
-        return json.load(data)
+def parse(data, format_name):
+    match format_name:
+        case 'json':
+            return json.load(data)
+        case 'yml' | 'yaml':
+            return yaml.safe_load(data)
+        case _:
+            raise ValueError("Unsupported data format")
+    
+    
+    

@@ -5,8 +5,6 @@ from gendiff.generate_diff import generate_diff
 def main():
     args = description_of_thegender_spread()
     diff = generate_diff(args.first_file, args.second_file, args.format)
-    with open('output.txt', 'w') as file:
-        file.write(diff)
     print(diff)
 
 

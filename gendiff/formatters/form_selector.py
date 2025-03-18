@@ -4,10 +4,13 @@ from gendiff.formatters.formatter_stylish import stylish
 
 
 def select_formatter(dict, format_name):
-    if format_name == 'stylish':
-        return stylish(dict)
-    if format_name == 'plain':
-        return plain(dict)
-    if format_name == 'json':
-        return to_json(dict)
+    match format_name:
+        case 'stylish':
+            return stylish(dict)
+        case 'plain':
+            return plain(dict)
+        case 'json':
+            return to_json(dict)
+        case _:
+            raise ValueError(f"Unsupported formatter: {format_name}")
     

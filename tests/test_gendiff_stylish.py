@@ -134,4 +134,16 @@ def test_generate_diff_yml(difference):
     assert result.strip() == difference.strip()
 
 
-    
+def test_generate_diff_json_and_yaml(difference):
+    result = generate_diff('./tests/fixtures/file1.json',
+                           './tests/fixtures/file2.yaml')
+    assert result.strip() == difference.strip()
+
+
+def test_generate_diff_json_and_yml(difference):
+    result = generate_diff('./tests/fixtures/file1.json',
+                           './tests/fixtures/file2.yml')
+    assert result.strip() == difference.strip()    
+
+
+
