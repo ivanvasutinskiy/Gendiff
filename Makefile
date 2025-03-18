@@ -29,7 +29,7 @@ test-coverage:
 check:
 	uv run pytest
 
-hhh:
+reinstall:
 	uv tool uninstall hexlet-code
 	uv build
 	uv tool install dist/*.whl

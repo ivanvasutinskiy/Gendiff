@@ -10,13 +10,11 @@ def load_file(path_to_file):
 
 
 def parse(data, format_name):
-    match format_name:
-        case 'json':
-            return json.load(data)
-        case 'yml' | 'yaml':
-            return yaml.safe_load(data)
-        case _:
-            raise ValueError("Unsupported data format")
+    if format_name == 'json':
+        return json.load(data)
+    if format_name == 'yaml' or format_name == 'yml':
+        return yaml.safe_load(data)
+    raise ValueError("Unsupported data format")
     
     
     
