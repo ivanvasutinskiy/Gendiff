@@ -11,6 +11,4 @@ def select_formatter(dict, format_name):
             return plain(dict)
         case 'json':
             return to_json(dict)
-        case _:
-            raise ValueError(f"Unsupported formatter: {format_name}")
     
