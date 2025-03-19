@@ -7,24 +7,24 @@
 
 [![Test Coverage](https://api.codeclimate.com/v1/badges/773d277682748a9d4c75/test_coverage)](https://codeclimate.com/github/ivanvasutinskiy/python-project-50/test_coverage)
 
-# Вычислитель отличий (Python)
+# Gendiff (Python)
 
-Второй проект на [Hexlet](https://ru.hexlet.io/programs/python/projects/50): Вычислитель отличий.   Программа: Python-разработчик.
+The second project on [Hexlet](https://ru.hexlet.io/programs/python/projects/50): Gendiff.   Program: Python developer.
 
-Проект направлен на работу с коллекциями. Gendiff — это утилита командной строки для сравнения двух конфигурационных файлов. Инструмент анализирует файлы и отображает различия в удобочитаемом формате. Он поддерживает форматы файлов JSON и YAML.
+The project is aimed at working with collections. Gendiff is a command—line utility for comparing two configuration files. The tool analyzes the files and displays the differences in a readable format. It supports JSON and YAML file formats.
 
-## Установка
+## Installation
 
-Клонируем GitHub репозиторий
+Cloning the GitHub repository
 ```
 $ git clone https://github.com/ivanvasutinskiy/python-project-50.git
 ```
-Устанавливаем UV
+UV Installation
 ```
 $ curl -LsSf https://astral.sh/uv/install.sh | sh
 ```
 
-## Запуск программы
+## Launching the program
 
 ```
 $ uv sync
@@ -32,20 +32,20 @@ $ uv build
 $ uv tool install dist/*.whl
 ```
 
-## Описание
+## Description
 
-### Вывод справки
+### Help output
 
 ```
 $ uv run gendiff --help
 ```
 
-- -h, --help — отобразить справочное сообщение и выйти.
-- -f FORMAT, --format FORMAT — задайте формат вывода (plain / json / stylish)
+- -h, --help — display a help message and exit.
+- -f FORMAT, --format FORMAT — set the output format (plain / json / stylish)
 
-## Примеры работы программы:
+## Examples of how the program works:
 
-### STYLISH формат (по умолчанию)
+### STYLISH format (default)
 
 ```
 $ uv run gendiff ./tests/fixtures/file1.json ./tests/fixtures/file2.json
@@ -53,7 +53,7 @@ $ uv run gendiff ./tests/fixtures/file1.json ./tests/fixtures/file2.json
 
 [![asciicast](https://asciinema.org/a/exuViPa6aApWM7j2JkUgqvsLz.svg)](https://asciinema.org/a/exuViPa6aApWM7j2JkUgqvsLz)
 
-### PLAIN формат
+### PLAIN format
 
 ```
 $ uv run gendiff -f plain ./tests/fixtures/file1.json ./tests/fixtures/file2.json
@@ -61,7 +61,7 @@ $ uv run gendiff -f plain ./tests/fixtures/file1.json ./tests/fixtures/file2.jso
 
 [![asciicast](https://asciinema.org/a/W1XDfIOWOAC6BaczmTWDxXDUK.svg)](https://asciinema.org/a/W1XDfIOWOAC6BaczmTWDxXDUK)
 
-### JSON формат
+### JSON format
 
 ```
 $ uv run gendiff -f json ./tests/fixtures/file1.json ./tests/fixtures/file2.json
