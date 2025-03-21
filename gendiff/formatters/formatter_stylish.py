@@ -22,7 +22,7 @@ def make_string(tree, depth=1):
                 f"{str(to_str(item['value'], new_depth))}"
             elif item['action'] == 'nested':
                 result += f"{indent}  {item['name']}: " \
-                f"{walk(item['children'], new_depth, result="")}"
+                f"{walk(item['children'], new_depth, result='')}"
             elif item['action'] == 'updated':
                 result += f"{indent}- {item['name']}: " \
                 f"{str(to_str(item['old_value'], new_depth))}\n"
@@ -32,7 +32,7 @@ def make_string(tree, depth=1):
                 result += f"{indent}  {item['name']}: " \
                 f"{str(to_str(item['value'], new_depth))}"
       
-        return "{" + f"{result}\n{SPACES_PER_LEVEL * (depth - 1) * " " + '}'}"
+        return "{" + f"{result}\n{SPACES_PER_LEVEL * (depth - 1) * ' ' + '}'}"
     return walk(tree, depth, "")
 
 
